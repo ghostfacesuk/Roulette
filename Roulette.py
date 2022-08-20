@@ -14,7 +14,7 @@ while count < turns:
 #    f = open("output.txt", "a")
     if x > y and x != 0:
 #        f.write("+ " + str(x) + "  "+ str(y) +"\n") 
-        print("Go lower! Last number was " + str(x) + ", random number was "+ str(y) +". \n") 
+        print("Go lower! Last number was " + str(x) + ", random number was "+ str(y) +". \n") # message to cause a conflict! lel
         golow += 1
     elif x < y and x != 0:
 #        f.write("- " + str(x) + "  "+ str(y) +"\n")
