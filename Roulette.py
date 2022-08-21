@@ -32,8 +32,6 @@ while count < turns:
         f.write("Error? " + str(x) + "  "+ str(y) + "\n")
         print("Error? " + str(x) + "  "+ str(y) + "\n")
         xyerror += 1
-#    x = y
-#    y = randint(0,36)
     count += 1
 
 print('Turns played: ' + str(count))

@@ -1,2 +1,4 @@
+Roulette - Steve G
+
 This program is based on this YouTube number strategy... 
-# https://www.youtube.com/watch?v=ud_frfkt1t0
+https://www.youtube.com/watch?v=ud_frfkt1t0
