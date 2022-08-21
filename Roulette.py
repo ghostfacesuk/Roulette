@@ -1,6 +1,11 @@
 from random import randint
 
-x = 0 # last number on the Roulette table
+def new_func():
+    x = int(input("Enter number between 0 & 36... "))
+    return x
+
+x = new_func() 
+# x = 0 # last number on the Roulette table
 y = randint(0,36)
 
 gohigh = 0
