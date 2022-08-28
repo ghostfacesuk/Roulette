@@ -15,8 +15,22 @@ xyerror = 0
 count = 0
 turns = 1
 
+red = ["1", "3", "5", "7", "9", "12", "14", "16", "18", "19", "21", "23", "25", "27", "30", "32", "34", "36"]
+black = ["2", "4", "6", "8", "10", "11", "13", "15", "17", "20", "22", "24", "26", "28", "29", "31", "33", "35"]
+green = ["0"]
+
 while count < turns:
     f = open("output.txt", "a")
+
+    if str(x) in red:
+        print("Last number was Red " + str(x) + ". \n")
+    elif str(x) in black:
+        print("Last number was Black " + str(x) + ". \n")
+    elif str(x) in green:
+        print("Last number was Green " + str(x) + ". \n")
+    else:
+        print("Error!")
+
     if x > y and x != 0:
         f.write("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
         print("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
