@@ -1,19 +1,15 @@
 from random import randint
 
 def num_input():
-    x = int(input("Enter number between 0 & 36... "))
+    x = input("Enter number between 0 & 36... ")
     return x
-
-x = num_input() 
-# x = 0 # last number on the Roulette table
-y = randint(0,36)
 
 gohigh = 0
 golow = 0
 xyerror = 0
 
-count = 0
-turns = 1
+count = 1
+turns = 0
 
 red = ["1", "3", "5", "7", "9", "12", "14", "16", "18", "19", "21", "23", "25", "27", "30", "32", "34", "36"]
 black = ["2", "4", "6", "8", "10", "11", "13", "15", "17", "20", "22", "24", "26", "28", "29", "31", "33", "35"]
@@ -22,8 +18,15 @@ green = ["0"]
 Ccolour = "unknown"
 Ncolour = "unknown"
 
-while count < turns:
+while count > turns:
 #    f = open("output.txt", "a") # output a text file for results
+
+    x = num_input() 
+    if str(x) == "q":
+        break 
+    x = int(x)
+    # x = 0 # last number on the Roulette table
+    y = randint(0,36)
 
     if str(x) in red:
         Ccolour = "Red"
@@ -64,8 +67,9 @@ while count < turns:
         print("Error? " + str(x) + " "+ str(y) + ". \n")
         xyerror += 1
     count += 1
+    turns += 1
 
-print('Turns played: ' + str(count))
+print('\n' + 'Turns played: ' + str(turns))
 print(str(gohigh) + ' Gone High')
 print(str(golow) + ' Gone Low')
 
