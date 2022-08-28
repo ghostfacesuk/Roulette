@@ -20,7 +20,7 @@ black = ["2", "4", "6", "8", "10", "11", "13", "15", "17", "20", "22", "24", "26
 green = ["0"]
 
 while count < turns:
-    f = open("output.txt", "a")
+#    f = open("output.txt", "a") # output a text file for results
 
     if str(x) in red:
         print("Last number was Red " + str(x) + ". \n")
@@ -32,23 +32,23 @@ while count < turns:
         print("Error!")
 
     if x > y and x != 0:
-        f.write("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
+#        f.write("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
         print("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
         golow += 1
     elif x < y and x != 0:
-        f.write("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
+ #       f.write("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
         print("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
         gohigh += 1
     elif x == 0:
-        f.write("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
+ #       f.write("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
         print("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
         gohigh += 1
     elif x == 36:
-        f.write("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
+ #       f.write("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
         print("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
         golow += 1
     else: 
-        f.write("Error? " + str(x) + "  "+ str(y) + "\n")
+ #       f.write("Error? " + str(x) + "  "+ str(y) + "\n")
         print("Error? " + str(x) + "  "+ str(y) + "\n")
         xyerror += 1
     count += 1
@@ -57,8 +57,8 @@ print('Turns played: ' + str(count))
 print(str(gohigh) + ' Gone High')
 print(str(golow) + ' Gone Low')
 
-f.write('Turns played: ' + str(count) + "\n")
-f.write(str(gohigh) + ' Gone High' + "\n")
-f.write(str(golow) + ' Gone Low' + "\n")
+# f.write('Turns played: ' + str(count) + "\n")
+# f.write(str(gohigh) + ' Gone High' + "\n")
+# f.write(str(golow) + ' Gone Low' + "\n")
 
 input()
