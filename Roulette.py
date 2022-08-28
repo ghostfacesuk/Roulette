@@ -47,19 +47,19 @@ while count > turns:
         print("Error setting new colour!")
 
     if x > y and x != 0:
-#        f.write("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
+#        f.write("Go lower! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         print("Go lower! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         golow += 1
     elif x < y and x != 0:
- #       f.write("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
+ #       f.write("Go higher! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         print("Go higher! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         gohigh += 1
     elif x == 0:
- #       f.write("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
+ #       f.write("Go higher! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n")
         print("Go higher! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n")  
         gohigh += 1
     elif x == 36:
- #       f.write("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
+ #       f.write("Go lower! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         print("Go lower! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         golow += 1
     else: 
@@ -73,7 +73,7 @@ print('\n' + 'Turns played: ' + str(turns))
 print(str(gohigh) + ' Gone High')
 print(str(golow) + ' Gone Low')
 
-# f.write('Turns played: ' + str(count) + "\n")
+# f.write('\n' + 'Turns played: ' + str(turns))
 # f.write(str(gohigh) + ' Gone High' + "\n")
 # f.write(str(golow) + ' Gone Low' + "\n")
 
