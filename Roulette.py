@@ -6,6 +6,7 @@ def num_input():
 
 gohigh = 0
 golow = 0
+feell = 0
 xyerror = 0
 
 count = 1
@@ -66,6 +67,10 @@ while count > turns:
  #       f.write("Go lower! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         print("Go lower! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         golow += 1
+    elif x == y:
+ #       f.write("Feelin' lucky? Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ".  BET ON " + str(Ncolour) + " " + str(y) + "! \n") 
+        print("Feelin' lucky? Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ".  BET ON " + str(Ncolour) + " " + str(y) + "! \n") 
+        feell += 1
     else: 
  #       f.write("Error? " + str(x) + "  "+ str(y) + "\n")
         print("Error? " + str(x) + " "+ str(y) + ". \n")
@@ -76,9 +81,11 @@ while count > turns:
 print('\n' + 'Turns played: ' + str(turns))
 print(str(gohigh) + ' Gone High')
 print(str(golow) + ' Gone Low')
+print(str(feell) + " Feelin' lucky")
 
 # f.write('\n' + 'Turns played: ' + str(turns))
 # f.write(str(gohigh) + ' Gone High' + "\n")
 # f.write(str(golow) + ' Gone Low' + "\n")
+# f.write(str(feell) + " Feelin' lucky")
 
 input()
