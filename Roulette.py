@@ -19,37 +19,49 @@ red = ["1", "3", "5", "7", "9", "12", "14", "16", "18", "19", "21", "23", "25", 
 black = ["2", "4", "6", "8", "10", "11", "13", "15", "17", "20", "22", "24", "26", "28", "29", "31", "33", "35"]
 green = ["0"]
 
+Ccolour = "unknown"
+Ncolour = "unknown"
+
 while count < turns:
 #    f = open("output.txt", "a") # output a text file for results
 
     if str(x) in red:
-        print("Last number was Red " + str(x) + ". \n")
+        Ccolour = "Red"
     elif str(x) in black:
-        print("Last number was Black " + str(x) + ". \n")
+        Ccolour = "Black"
     elif str(x) in green:
-        print("Last number was Green " + str(x) + ". \n")
+        Ccolour = "Green"
     else:
-        print("Error!")
+        print("Error setting current colour!")
+
+    if str(y) in red:
+        Ncolour = "Red"
+    elif str(y) in black:
+        Ncolour = "Black"
+    elif str(y) in green:
+        Ncolour = "Green"
+    else:
+        print("Error setting new colour!")
 
     if x > y and x != 0:
 #        f.write("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
-        print("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
+        print("Go lower! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         golow += 1
     elif x < y and x != 0:
  #       f.write("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
-        print("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
+        print("Go higher! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         gohigh += 1
     elif x == 0:
  #       f.write("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
-        print("Go higher! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
+        print("Go higher! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n")  
         gohigh += 1
     elif x == 36:
  #       f.write("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n")
-        print("Go lower! Last number was " + str(x) + ", random number was " + str(y) + ". \n") 
+        print("Go lower! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
         golow += 1
     else: 
  #       f.write("Error? " + str(x) + "  "+ str(y) + "\n")
-        print("Error? " + str(x) + "  "+ str(y) + "\n")
+        print("Error? " + str(x) + " "+ str(y) + ". \n")
         xyerror += 1
     count += 1
 
