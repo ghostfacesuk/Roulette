@@ -23,9 +23,13 @@ while count > turns:
 
     x = num_input() 
     if str(x) == "q":
-        break 
-    x = int(x)
-    # x = 0 # last number on the Roulette table
+        break
+    try:
+        x = int(x)
+    except:
+        print('Invalid put, will now exit')
+        break
+    
     y = randint(0,36)
 
     if str(x) in red:
