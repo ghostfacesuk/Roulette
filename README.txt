@@ -7,4 +7,7 @@ https://www.youtube.com/watch?v=ud_frfkt1t0
 
 USAGE
 
-Input a number between 0 & 36. Will return a higher or lower prediction. 
+Input a number between 0 & 36. Will return a higher or lower number plus colour prediction. 
+
+NOTES:
+This does have code for a results output file however it is commented out! 
