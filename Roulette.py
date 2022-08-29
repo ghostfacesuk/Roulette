@@ -28,8 +28,8 @@ while count > turns:
     try:
         x = int(x)
     except:
-        print('Invalid put, will now exit')
-        break
+        print("\n***Invalid Input***\nEnter a number between 0 & 36 or press 'q' to quit. \n")
+        continue
     
     y = randint(0,36)
 
@@ -40,7 +40,8 @@ while count > turns:
     elif str(x) in green:
         Ccolour = "Green"
     else:
-        print("Error setting current colour!")
+        Ccolour = "Unknown"
+        print("\n***Input out of range!***")
 
     if str(y) in red:
         Ncolour = "Red"
@@ -49,7 +50,8 @@ while count > turns:
     elif str(y) in green:
         Ncolour = "Green"
     else:
-        print("Error setting new colour!")
+        Ncolour = "Unknown"
+        print("\n***Input out of range!***")
 
     if x > y and x != 0:
 #        f.write("Go lower! Last number was " + str(Ccolour) + " " + str(x) + ", random number is " + str(Ncolour) + " " + str(y) + ". \n") 
