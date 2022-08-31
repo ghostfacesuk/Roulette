@@ -1,5 +1,7 @@
 from random import randint
 
+# Errmmm some other stuff to cause a conflict (branch test comment)
+
 def num_input():
     x = input("Enter number between 0 & 36... ")
     return x
