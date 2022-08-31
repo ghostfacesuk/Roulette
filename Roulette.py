@@ -1,6 +1,7 @@
 from random import randint
 
 # I put this in to test branching! 
+# More comments to cause confusion!
 
 def num_input():
     x = input("Enter number between 0 & 36... ")
